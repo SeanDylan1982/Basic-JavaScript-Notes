@@ -1,0 +1,25 @@
+* {
+  font-family: Asap, Poppins, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  background-color: #f1f1f1;
+  color: #1a1a1a;
+}
+
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+button {
+  position: relative;
+  margin: auto;
+}
+
+.show-btn {
+  z-index: 1;
+}
+
+.hide-btn {
+  z-index: -1;
+}
