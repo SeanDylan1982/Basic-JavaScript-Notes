@@ -203,3 +203,140 @@
 // wordBlanks("girl", "old", "arrived", "smartly");
 // console.log(wordBlanks("dog", "big", "ran", "quickly"));
 
+// Arrays
+// var ourArray = ["John", 23];
+// var myArray = ["Quincy", 1];
+// console.log(ourArray, myArray);
+
+// Nested Arrays
+// var ourNewArray = [["the universe", 42], ["everything", 101010]];
+// var myNewArray = [["Sean", 100], ["Best", 1]];
+// console.log(ourNewArray, myNewArray);
+
+// Using bracket notation to target specific indexes
+// var ourNewArray = [["the universe", 42], ["everything", 101010]];
+// var myNewArray = [["Sean", 100], ["Best", 1]];
+// console.log(ourNewArray[1][1], myNewArray[0][0]);
+
+// Modifying Data in arrays with bracket notation
+// var ourArray = [18, 64, 99];
+// console.log(ourArray[1]);
+// ourArray[1] = 45;
+// console.log(ourArray[1]);
+
+// var myArray = [18, 64, 99];
+// console.log(myArray);
+// This changes the value of the data at index position 2 in the myArray array
+// myArray[2] = 11;
+// console.log(myArray);
+// This adds a new item to the myArray array at index position 3 as no value is currently stored at index position 3 a new array index is created
+// myArray[3] = 11;
+// console.log(myArray);
+// This adds a new item to the myArray array at index position 4 as no value is currently stored at index position 4 a new array index is created
+// By doing this, you skip over index position 3 but JS still has to allocate a point in memory for the value of index position 3 even although it contains no data/value, it console.logs to display indexes 0-2, position 3 is noted as an empty item slot, index position 4 is the now created and assigned value of 11
+// myArray[4] = 11;
+// console.log(myArray);
+
+// Accessing multi dimensional arrays
+// var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12],13,14]];
+// var myData = myArray[3][0];
+// console.log(myArray, myData);
+
+// Append data to the end of an aray with push (add an item to the end of the array)
+// var ourArray = ["Stimpson", "J", "cat"];
+// ourArray.push(["happy", "joy"]);
+// console.log(ourArray);
+
+// var myNewArray = [["John", 23], ["cat", 2]];
+// myNewArray.push(["Reg", 42]);
+// console.log(myNewArray);
+
+// Removing the last item from arrays with .pop()
+// var ourArray = [1,2,3];
+// Removing an item and storing it's value - Declare the variable, then assign it to the value of the .pop() in this case 3
+// var removedFromOurArray = ourArray.pop();
+// console.log(ourArray, removedFromOurArray);
+// Removing an item and storing it's value - Declare the variable removedFromMyArray then assign it to the value of the .pop() in this case the nested array ["cat", 2]
+// var myArray = [["John", 23], ["cat", 2]];
+// var removedFromMyArray = myArray.pop();
+// console.log(myArray, removedFromMyArray);
+
+// Remove the first element from an array with .shift() same as .pop() but for the first item in the targetted array instead of the last
+// var ourArray = ["Stimpson", "J", ["cat", 2]];
+// var removedFromOurArray = ourArray.shift();
+// console.log(ourArray, removedFromOurArray);
+
+// var myArray = [["John", 23], ["dog", 3]];
+// var removedFromMyArray = myArray.shift();
+// console.log(myArray, removedFromMyArray);
+
+// Adding items to the beginning of arrays with .unshift() same as .push() but for the first item in the targetted array instead of the last
+// var ourArray = ["Stimpson", "J", "cat"];
+// ourArray.shift(); // This removes "Stimpson" from the first position in the array
+// console.log(ourArray);
+// ourArray.unshift("Happy"); // This adds "Happy" as the new first element of the array
+// console.log(ourArray);
+
+// var myArray = [["John", 23], ["dog", 3]];
+// myArray.shift(); // Remove ["John", 23] as the first item in the myArray array
+// console.log(myArray);
+// myArray.unshift(["cat", 3]); // Add ["cat", 3] as the new first item in the myArray array
+// console.log(myArray);
+
+// Working with nested arrays (like a shopping list)
+// var myList = [["cereal", 3], ["milk", 2], ["bananas", 3], ["juice", 2], ["eggs", 1]];
+// console.log(myList);
+
+// Writing reusable code with functions
+// function ourReusableCodeFunction() {
+//   console.log("Heyya, World");
+// }
+// ourReusableCodeFunction();
+// ourReusableCodeFunction();
+// ourReusableCodeFunction();
+
+// function reusableFunction() {
+//   console.log("Hi, World!");
+// }
+// reusableFunction();
+
+// Passing values to functions with arguments - The parameters specified inside the parentheses ()
+// function ourFunctionWithArgs(a, b) {
+//   console.log(a -b);
+// }
+// ourFunctionWithArgs(10, 5); // Outputs the difference of 5 to the console
+
+// function testFunctionWithArgs(a, b, c) {
+//   console.log(a + b - c);
+// }
+// testFunctionWithArgs(100, 5, 80);
+
+// Global scope and functions
+// This will always output 10 to the console because it's declared scope is global, no matter where it's called or referenced it will be accessible due to it's globally declared scope
+// var myGlobal = 10;
+
+// function fun1() {
+   // If the "var" keyword is used to declare this variable it will only have local scope, restricted to work within the function fun1()
+//   oopsGlobal = 5;
+   // This will output 5 to the console as it's within the scope of the declared variable
+//   console.log(oopsGlobal);
+// }
+    // This will output 5 to the console as it's declared within the fun1() function but without a "var" keyword meaning it becomes globally declared
+// console.log(fun1);
+
+// function fun2() {
+//   var output = "";
+//   if (typeof myGlobal != "undefined") {
+//     output += "myGlobal: " + myGlobal;
+//   }
+//   if (typeof oopsGlobal != "undefined") {
+//     output += " oopsGlobal: " + oopsGlobal;
+//   }
+//   console.log(output);
+// }
+
+// fun1();
+// fun2();
+// console.log(fun1, fun2);
+
+// Local scope and functions
