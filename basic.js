@@ -340,3 +340,263 @@
 // console.log(fun1, fun2);
 
 // Local scope and functions
+// function myLocalScope() {
+//     myVar = 5;
+//     console.log(myVar);
+// }
+// myLocalScope();
+
+// Local and Global Variable with the Same name
+// Local variables take precedence over global variables
+// var outerWear = "T-Shirt";
+
+// function myOutfit() {
+//     var outerWear = "sweater";
+
+//     return outerWear;
+// }
+
+// console.log(myOutfit());
+// console.log(outerWear);
+
+// Return a value from a function with return
+// Return statements can only be made inside functions
+// function minusSeven(num) {
+//     return num - 7;
+// }
+
+// console.log(minusSeven(10));
+
+// function timesFive(num) {
+//     return num * 5;
+// }
+// console.log(timesFive(5));
+
+// Understanding Undefined value returned from a function
+// var sum = 0;
+// function addThree() {
+//     sum += 3;
+// }
+
+// console.log(addThree(5));
+
+// function addFive() {
+//     sum += 5;
+// }
+
+// console.log(addFive(5));
+
+// Assignment with a returned value
+// var changed = 0;
+
+// function change(num) {
+//     return (num + 5) / 3;
+// }
+
+// changed = change(10);
+
+// console.log(changed);
+
+// var processed = 0;
+
+// function processArg(num) {
+//     return (num + 3) / 5;
+// }
+// processed = processArg(7);
+// console.log(processed);
+
+// Stand in line
+// function nextInLine(arr, item) {
+//     arr.push(item);
+//     return arr.shift();
+// }
+
+// var testArr = [1,2,3,4,5];
+
+// console.log("Before: " + JSON.stringify(testArr));
+// console.log(nextInLine(testArr, 6));
+// console.log("After: " + JSON.stringify(testArr));
+
+// Boolean values | true/false | On/Off
+// function welcomeToBooleans() {
+//     return true;
+// }
+// console.log(welcomeToBooleans());
+
+// Using conditional logic with If statements
+// function ourTrueOrFalse(isItTrue) {
+//     if (isItTrue) {
+//         return "Yes, it's true";
+//     }
+//     return "No, it's false";
+// }
+
+// function trueOrFalse(wasThatTrue) {
+//     if (wasThatTrue) {
+//         return "Yes, that was true";
+//     }
+//     return "No, that was false";
+// }
+
+// console.log(trueOrFalse(true));
+// console.log(trueOrFalse(false));
+
+// Comparison with the equality operator
+// function testEqual(val) {
+//     if (val == 12) {
+//         return "Equal";
+//     }
+//     return "Not Equal";
+// }
+
+// console.log(testEqual(10));
+
+// Comparison with the Strict equality operator | deeply equal | very equal
+// function testStrict(val) {
+//     if (val === 10) {
+//         return "Equal";
+//     }
+//     return "Not Equal";
+// }
+
+// console.log(testStrict(10));
+// console.log(testStrict('10'));
+
+// 3 === 3;
+// 3 === '3';
+
+// Practice
+// function compareEquality(a, b) {
+//     if (a == b) {
+//         return "Equal";
+//     }
+//     return "Not Equal";
+// }
+
+// console.log(compareEquality(10, "10"));
+
+// function compareEqualityNow(a, b) {
+//     if (a === b) {
+//         return "Equal";
+//     }
+//     return "Not Equal";
+// }
+
+// console.log(compareEqualityNow(10, "10"));
+
+// Comparison with the Inequality operator
+// function testNotEqual(val) {
+//     if (val!= 10) {
+//         return "Not Equal";
+//     }
+//     return "Equal";
+// }
+
+// console.log(testNotEqual(10));
+
+// function testNotEqualNow(val) {
+//     if (val!= 12) {
+//         return "Not Equal";
+//     }
+//     return "Equal";
+// }
+
+// console.log(testNotEqualNow(10));
+
+//Comparison with the Strict Inequality operator
+// function testStrictNotEqual(val) {
+
+//     if (val !== 10) {
+
+//         return "Not Equal";
+//     }
+//     return "Equal";
+// }
+
+// console.log(testStrictNotEqual(10));
+
+// function testStrictNotEqualNow(val) {
+
+//     if (val !== 12) {
+
+//         return "Not Equal";
+//     }
+//     return "Equal";
+// }
+
+// console.log(testStrictNotEqualNow(10));
+
+// Comparisons with the Logical And Operator
+// function testGreaterThan(val) {
+//     if (val > 100) {
+//         return "Over 100";
+//     }
+
+//     if (val > 10) {
+//         return "Over 10";
+//     }
+
+//     return "10 or Under";
+// }
+
+// console.log(testGreaterThan(10));
+
+// Comparison with the Greater Than or Equal To operator >=
+// function testGreaterOrEqual(val) {
+//     if (val >= 20) {
+//         return "20 or Over";
+//     }
+
+//     if (val >= 10) {
+//         return "10 or Over";
+//     }
+
+//     return "Less than 10";
+// }
+
+// console.log(testGreaterOrEqual(10));
+
+// Comparison with the Less Than operator <
+// function testLessThan(val) {
+//     if (val < 25) {
+//         return "Under 25";
+//     }
+
+//     if (val < 55) {
+//         return "Under 55";
+//     }
+
+//     return "55 or Over";
+// }
+
+// console.log(testLessThan(10));
+
+// Comparison with the Less Than or Equal To operator
+// function testLessOrEqual(val) {
+//     if (val <= 12) {
+//         return "Smaller than or equal to 12";
+//     }
+
+//     if (val <= 24) {
+//         return "Smaller than or equal to 24";
+//     }
+
+//     return "More than 24";
+// }
+
+// console.log(testLessOrEqual(10));
+
+// Comparisons with the Logical And Operator
+// function testLogicalAnd(val) {
+
+//     if (val < 20) {
+//         if (val > 1) {
+//             return "Yes";
+//         }
+//     }
+
+//     return "No";
+// }
+
+// console.log(testLogicalAnd(10));
+
