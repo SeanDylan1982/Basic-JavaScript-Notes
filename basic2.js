@@ -424,3 +424,203 @@
 // console.log(a);
 // console.log(b);
 
+// Use Destructuring Assignment with the rest... operator
+// const source = [1,2,3,4,5,6,7,8,9,10];
+// function removeFirstTwo(list) {
+
+//   const [ , , ...arr] = list;
+
+//   return arr;
+// }
+
+// const arr = removeFirstTwo(source);
+// console.log(arr);
+// console.log(source);
+
+// Use Destructuring Assignment to Pass an Object as a Functions parameter
+// const stats = {
+//   max: 56.78,
+//   standard_deviation: 4.34,
+//   median: 34.54,
+//   mode: 23.87,
+//   min: -0.75,
+//   average: 35.85
+// };
+// const half = (function() {
+//   return function half({ max, min }) {
+//     return( max + min) / 2.0;
+//   };
+// })();
+// console.log(stats);
+// console.log(half(stats));
+
+// Create Strings using Template Literals (Use back ticks `` terminal keys)
+// const person = {
+//   name: "Zodiac Hasabro",
+//   age: 56
+// };
+
+// const greeting = `Hello, my name is ${person.name}!
+// I am ${person.age} years old.`;
+
+// console.log(greeting);
+
+// const result = {
+//   success: ["max-length", "no-amd", "prefer-arrow-functions"],
+//   failure: ["no-var", "var-on-top", "linebreak"],
+//   skipped: ["id-blacklist", "no-dup-keys"]
+// };
+// function makeList(arr) {
+//   const resultDisplayArray = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`)
+//   }
+
+//   return resultDisplayArray;
+// }
+// makeList(result.failure) should return:
+// [
+// `<li class="text-warning">no-var</li>`,
+// `<li class="text-warning">var-on-top</li>`,
+// `<li class="text-warning">linebreak</li>`
+// ]
+
+// const resultDisplayArray = makeList(result.failure);
+
+// console.log(resultDisplayArray);
+
+// Write concise Object Literal declarations using simple fields
+// const createPerson = (name, age, gender) => {
+
+//   return {
+//     name: name,
+//     age: age,
+//     gender: gender
+//   };
+
+// };
+// console.log(createPerson("Zodiac Hasabro", 56, "male"));
+
+// const createPerson = (name, age, gender) => ( { name, age, gender })
+// console.log(createPerson("Zodiac Hasabro", 56, "male"));
+
+// Write concise declarative functions
+// const bicycle = {
+//   gear: 2,
+//   setGear: function(newGear) {
+//     "use strict";
+//     this.gear = newGear;
+//   }
+// };
+
+// bicycle.setGear(3);
+// console.log(bicycle.gear);
+
+// const bicycle = {
+//   gear: 2,
+//   setGear(newGear) {
+//     "use strict";
+//     this.gear = newGear;
+//   }
+// };
+
+// bicycle.setGear(3);
+// console.log(bicycle.gear);
+
+// Use class syntax to define a constructor function
+// This is the original way of creating classes
+// var SpaceShuttle = function(targetPlanet) {
+//   this.targetPlanet = targetPlanet;
+// }
+// Create whole new classes of objects with the "new" keyword - classes are Capitalized
+// var zeus = new SpaceShuttle('Jupiter');
+
+// console.log(zeus.targetPlanet);
+// class SpaceShuttle {
+//   constructor(targetPlanet) {
+//   this.targetPlanet = targetPlanet;
+//   }
+// };
+// Create whole new classes of objects with the new keyword - classes are Capitalized
+// var zeus = new SpaceShuttle('Jupiter');
+
+// console.log(zeus.targetPlanet);
+
+// function makeClass() {
+//   class Vegetable {
+//     constructor(name) {
+//       this.name = name;
+//     }
+//   }
+//   return Vegetable;
+// }
+
+// const Vegetable = makeClass();
+// const carrot = new Vegetable('carrot');
+// console.log(carrot.name);
+
+// Use Getters and Setters to control access to an object
+// class Book {
+//   constructor(author) {
+//     this._author = author;
+//   }
+//   // Getter
+//   get writer() {
+//     return this._author;
+//   }
+//   // Setter
+//   set writer(updatedAuthor) {
+//     this._author = updatedAuthor;
+//   }
+// }
+
+// function makeClass() {
+// class Thermostat {
+//   constructor(temp) {
+//     this._temp = 5/9 * (temp - 32);
+//   }
+//   get temperature() {
+//     return this._temp;
+//   }
+//   set temperature(updatedTemp) {
+//     this._temp = updatedTemp;
+//   }
+// }
+//   return Thermostat;
+// }
+
+// const Thermostat = makeClass();
+// const thermos = new Thermostat(76);
+// let temp = thermos.temperature;
+// thermos.temperature = 26;
+// temp = thermos.temperature;
+// console.log(temp);
+
+// Understanding the difference between Import and Require
+// Export/Import between files within the same project/workspace to reference functions etc
+// /* export/import */ const capitalizeString = str => str.toUpperCase(); (in app.js)
+// import { capitalizeString } from "./app.js"
+// const cap = capitilizeString("hello!");
+
+// console.log(cap);
+
+// Use Export to Reuse a Code Block
+// const capitalizeString = (string) => {
+//   return string.charAt(0).toUpperCase() + string.slice(1);
+// }
+
+// export { capitalizeString };
+
+// export const foo = "bar";
+// export const bar = "foo";
+
+// Use * to Import Everything from a file (Import/Export declarations must be made at the top of the page)
+// import * as capitalizedStrings from "app.js";
+
+// Create an Export Fallback with Export default
+// export default function subtract(x,y) {return x - y;}
+
+// Import a default Export - no {}
+// import substract from "math_functions"
+
+// subtract(7,4);
