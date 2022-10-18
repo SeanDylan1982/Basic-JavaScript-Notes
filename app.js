@@ -1,3 +1,5 @@
+// export const capitalizeString = str => str.toUpperCase();
+
 // Attempting to make a Dark Mode toggle switch
 // function toggleDarkMode() {
 //   document.addEventListener('click', function() {
@@ -30,3 +32,4 @@
 //   return myArray[myNumber];
 // }
 // randomPick();
+
